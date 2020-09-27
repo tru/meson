@@ -877,6 +877,9 @@ class Compiler(metaclass=abc.ABCMeta):
     def get_gui_app_args(self, value: bool) -> T.List[str]:
         return []
 
+    def get_win_subsystem_args(self, value: str) -> T.List[str]:
+        return []
+
     def has_func_attribute(self, name: str, env: 'Environment') -> T.Tuple[bool, bool]:
         raise EnvironmentException(
             'Language {} does not support function attributes.'.format(self.get_display_language()))
